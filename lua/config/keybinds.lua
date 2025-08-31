@@ -26,3 +26,6 @@ vim.keymap.set("n", "<Tab>", ":bnext<CR>", opts)
 vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>", opts)
 vim.keymap.set("n", "<leader>x", ":bdelete!<CR>", opts) -- close buffer
 vim.keymap.set("n", "<leader>b", "<cmd> enew <CR>", opts) -- new buffer
+
+-- terminal
+map("t", "<C-x>", "<C-\\><C-N>", { desc = "terminal escape terminal mode" })
