@@ -10,12 +10,14 @@ return function(lspconfig, capabilities, on_attach)
 	local fixjson = require("efmls-configs.formatters.fixjson") -- json formatter
 	local shellcheck = require("efmls-configs.linters.shellcheck") -- bash linter
 	local shfmt = require("efmls-configs.formatters.shfmt") -- bash formatter
+
 	lspconfig.efm.setup({
 		on_attach = on_attach,
 		capabilities = capabilities,
 		filetypes = {
 			"css",
 			"docker",
+			"dockerfile",
 			"html",
 			"javascript",
 			"javascriptreact",
@@ -40,7 +42,6 @@ return function(lspconfig, capabilities, on_attach)
 		settings = {
 			languages = {
 				css = { prettier_d },
-				docker = { prettier_d },
 				html = { prettier_d },
 				javascript = { eslint_d, prettier_d },
 				javascriptreact = { eslint_d, prettier_d },
